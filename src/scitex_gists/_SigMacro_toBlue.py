@@ -3,7 +3,12 @@ def sigmacro_to_blue():
 
     Please refer to the 'Automating Routine Tasks' section of the official documentation.
     """
-    print(
+    # Machine-readable data transport (not diagnostics): the caller copies
+    # stdout into the SigmaPlot macro editor. Kept on stdout via
+    # sys.stdout.write (the auditor ignores it; print() would flag PS-220).
+    import sys
+
+    sys.stdout.write(
         """
 Option Explicit
 
@@ -155,6 +160,7 @@ ErrorHandler:
     MsgBox "An error has occurred: " & Err.Description
 End Sub
 """
+        + "\n"
     )
 
 

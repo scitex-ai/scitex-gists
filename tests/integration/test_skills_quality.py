@@ -1,5 +1,9 @@
 """Enforces SciTeX skills quality checklist §1–§4."""
 
+# PS-206b: import-smoke-allowed — this module ships no `def test_*`
+# functions of its own; it registers factory-built cases
+# (`make_skill_quality_tests`) whose assertions live in scitex-dev.
+
 from pathlib import Path
 
 import pytest
