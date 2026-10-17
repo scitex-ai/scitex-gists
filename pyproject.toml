@@ -24,6 +24,7 @@ classifiers = [
 ]
 dependencies = [
     "scitex-dev>=0.17.8",
+    "scitex-logging>=0.1.0",
 ]
 
 [project.optional-dependencies]

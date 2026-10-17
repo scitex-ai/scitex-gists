@@ -1,9 +1,12 @@
+import scitex_logging as slogging
+
+
 def sigmacro_process_figure_s():
     """Print a macro for SigmaPlot (v12.0) to format a panel.
 
     Please refer to the 'Automating Routine Tasks' section of the official documentation.
     """
-    print(
+    slogging.getPlainConsole(__name__).emit(
         """
 Option Explicit
 

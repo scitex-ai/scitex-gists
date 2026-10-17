@@ -1,9 +1,12 @@
+import scitex_logging as slogging
+
+
 def sigmacro_to_blue():
     """Print a macro for SigmaPlot (v12.0) that changes the color and style of the selected object.
 
     Please refer to the 'Automating Routine Tasks' section of the official documentation.
     """
-    print(
+    slogging.getPlainConsole(__name__).emit(
         """
 Option Explicit
 
